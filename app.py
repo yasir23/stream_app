@@ -29,7 +29,7 @@ if "vector" not in st.session_state:
     st.session_state.loader = UnstructuredMarkdownLoader(markdown_path, mode="elements")
     st.session_state.docs = st.session_state.loader.load()
 
-    st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     st.session_state.documents = st.session_state.text_splitter.split_documents( st.session_state.docs)
     st.session_state.vector = FAISS.from_documents(st.session_state.documents, st.session_state.embeddings)
 st.title("Medical")
