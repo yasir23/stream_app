@@ -24,7 +24,7 @@ markdown_path ="./medical.md"
 
 if "vector" not in st.session_state:
 
-    st.session_state.embeddings = FastEmbedEmbeddings(model_name = 'BAAI/bge-small-en-v1.5')
+    st.session_state.embeddings = FastEmbedEmbeddings(model_name = 'all-MiniLM-L6-v2')
 
     st.session_state.loader = UnstructuredMarkdownLoader(markdown_path, mode="elements")
     st.session_state.docs = st.session_state.loader.load()
