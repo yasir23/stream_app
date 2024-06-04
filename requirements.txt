@@ -7,3 +7,4 @@ langchain_community
 fastembed
 tqdm
 markdown
+sentence-transformers
